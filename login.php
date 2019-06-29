@@ -12,7 +12,7 @@
 <script src="lib/common.js"></script>
 <style>
 </style>
-Login using following credential: phipgn/avengedSevenfold@2019<br />
+Login using following credential: pathana/avengedSevenfold@2019<br />
 <label>Username</label><input type="text" id="txt_username" /><br />
 <label>Password</label><input type="password" id="txt_password" /><br />
 <label></label><button id='btnLogin'>Login</button><br />
