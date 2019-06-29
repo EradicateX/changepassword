@@ -12,7 +12,21 @@ input{width:250px;}
 <label>New Password</label><input type="text" id="txt_newpassword" /><br />
 <label>Re-type Password</label><input type="text" id="txt_newpassword2" /><br />
 <label></label><button id='btnChangePassword'>Change Password</button><br />
-<div id='message'></div>
+<div id='message'></div><br />
+
+<b>Password requirement</b><br/>
+<br/>
+- At least 18 alphanumeric characters and list of special chars !@#$&*<br/>
+- At least 1 Upper case, 1 lower case, least 1 numeric, 1 special character<br/>
+- No duplicate repeat characters more than 4<br/>
+- No more than 4 special characters<br/>
+- 50 % of password should not be a number<br/>
+<br/>
+<b>Change password requirement</b><br/>
+<br/>
+- Old password should match with system<br/>
+- New password should be a valid password<br/>
+- New password is not similar to old password < 80% match.<br/>
 
 <script>
 $(document).ready(function() {
