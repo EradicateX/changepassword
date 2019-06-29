@@ -112,14 +112,19 @@ $(document).ready(function() {
 		return rate;
 	}
 	
+	function containsInvalidCharacters(p) {
+		var result = /[^A-Za-z0-9!@#$&*]/g.test(p); // return any characters not belong to alphabets, numbers and the list of 6 special chars
+		return result;
+	}
+	
 	function contains5RepeatCharacters(p) {
 		var a = [];
 		for (var i = 0; i < p.length; i++) {
 			if (!a.includes(p[i])) {
 				var count = p.split(p[i]).length - 1;
-				console.log(p[i] + " repeats for " + count + " times");
 				a.push(p[i]);
 				if (count > 4) {
+					console.log(p[i] + " repeats for " + count + " times");
 					return true;
 				}
 			}
@@ -127,10 +132,12 @@ $(document).ready(function() {
 		return false;
 	}
 	
+	// list of special chars !@#$&*
+	// https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 	function countSpecialCharacters(p) {
 		count = 0;
 		for (var i = 0; i < p.length; i++) {
-			if (p[i] == '!' || p[i] == '@' || p[i] == '#' || p[i] == '$' || p[i] == '&' || p[i] == '*') {
+			if (/[!@#$&*]/.test(p[i])) {
 				count++;
 			}
 		}
@@ -163,6 +170,11 @@ $(document).ready(function() {
 			
 			if (new_password.trim().length < 18) {
 				notifyError("New password must contain at least 18 characters");
+				return false;
+			}
+			
+			if(containsInvalidCharacters(new_password)) {
+				notifyError("New password must contain alphabets, numbers and these special characters: '!@#$&*' only");
 				return false;
 			}
 			
