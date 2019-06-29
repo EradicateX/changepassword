@@ -21,6 +21,7 @@ input{width:250px;}
 - No duplicate repeat characters more than 4<br/>
 - No more than 4 special characters<br/>
 - 50 % of password should not be a number<br/>
+- User can input new password with characters belong to alphabets, digits and these 6 special characters only: "!@#$&*", any characters else should be considered invalid.<br />
 <br/>
 <b>Change password requirement</b><br/>
 <br/>
