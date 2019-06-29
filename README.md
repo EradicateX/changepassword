@@ -11,7 +11,9 @@
 - By default, the deloy path for XAMPP will be at: C:\xampp\htdocs
 - Clone this project, put it at: C:\xampp\htdocs\changepassword
 - Launch XAMPP control UI at: C:\xampp\xampp-control.exe, start Apache and MySQL services.
-- Open Chrome, and access http://localhost/changepassword/. If you can see a login screen, 
+- Once you started the MySQL service, go to http://localhost/phpmyadmin/ on your web browser, create a new database, name it "changepassword" and import the sql file from: C:\xampp\htdocs\changepassword\sql\changepassword.sql
+- Open Chrome, and access http://localhost/changepassword/. If you can see a login screen, then you're good to go. Use this credential to login: pathana/avengeSevenfold@2019
+- Then click on Chang Password link to go to Change Password function.
 
 ## Video Tutorial:
-- To make it more easy, I made a video to give you a quick overview about this project.
+- To make it more easy, I made a video to give you a quick overview about this project: 
